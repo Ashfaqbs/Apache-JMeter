@@ -1,8 +1,45 @@
 ## Testing a Spring Boot API with JMeter Snippets:
 
+- Save the plan
+![alt text](image-1.png)
+
+- create the Thread group
+![alt text](image.png)
+![alt text](image-2.png)
+Ctrl + S to save it
+
+- configure the API Call
+![alt text](image-3.png)
+![alt text](image-4.png)
+
+- checking the result analysis
+![alt text](image-5.png)
+select both "View Results Tree" and "Summary Report"
+save it and run it the green play button.
 
 
+```
+our sample api
+@Controller
+public class ContentController {
 
+  static int counter =1;
+  @GetMapping("/home")
+  public String handleWelcome()
+
+
+  {
+
+    System.out.println( "Calling home " + counter);
+    counter++;
+    return "home";
+  }
+}
+
+```
+
+Result:
+![alt text](image-6.png)
 
 
 
